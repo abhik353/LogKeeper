@@ -1,0 +1,42 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "test 1",
+      "attention": false,
+      "tech": "John doe2",
+      "date": "2020-09-01T07:41:32.215Z"
+    },
+    {
+      "message": "test 2",
+      "attention": true,
+      "tech": "John doe2",
+      "date": "2020-09-01T07:38:47.381Z",
+      "id": 2
+    },
+    {
+      "message": "hurray",
+      "attention": false,
+      "tech": "John doe2",
+      "date": "2020-09-01T07:49:37.847Z",
+      "id": 3
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 3,
+      "firstName": "Sara",
+      "lastName": "Wilson"
+    }
+  ]
+}
