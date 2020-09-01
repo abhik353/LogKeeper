@@ -128,7 +128,7 @@ export const updateLogs = log => async dispatch =>  {
        
 }
 
-// search logs
+//search logs
 
 export const searchLogs = (text) => async dispatch =>  {
     try{
