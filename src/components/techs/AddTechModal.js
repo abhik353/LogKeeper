@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import M from 'materialize-css/dist/js/materialize.min.js'
+import { addTechs } from '../../actions/techActions'
 
-const AddTechModal = () => {
+const AddTechModal = ({addTechs}) => {
     const [firstName, setFirstname] = useState('')
     const [lastName, setLastname] = useState('')
 
@@ -10,7 +13,11 @@ const AddTechModal = () => {
             M.toast({html: 'fields cannot be blank'})
         }
         else{
-        console.log(firstName, lastName)
+        addTechs({
+            firstName,
+            lastName
+        })
+        M.toast({html: `Tech ${firstName} successfully added`})
         setFirstname('')
         setLastname('')
         }
@@ -45,5 +52,8 @@ const AddTechModal = () => {
     )
 }
 
+AddTechModal.propTypes = {
+    addTechs: PropTypes.func.isRequired
+}
 
-export default AddTechModal
+export default connect(null,{addTechs})(AddTechModal)
